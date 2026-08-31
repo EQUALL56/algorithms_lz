@@ -1,10 +1,18 @@
-def main ():
+import random
 
-def data_generate (count : int = 100 , min : int = None , max : int = None ):
-    if min == None :
-        min = -10**9
-    elif max == None:
-        max = 10**9
+
+def main():
+    arr1 = data_generate()
+    arr2 = arr1
+    bubble_sort(arr1)
+    selection_sort(arr2)
+
+
+def data_generate(count: int = 100, min_val: int = -(10**9), max_val: int = 10**9):
+    arr = []
+    arr = random.choices(range(min_val, max_val), k=count)
+    return arr
+
 
 def bubble_sort(arr):
     iter = 0
@@ -17,6 +25,7 @@ def bubble_sort(arr):
     print(f"""Sorted list: {arr}.
 And count of iterations : {iter}""")
     return arr
+
 
 def selection_sort(arr):
     iter = 0
