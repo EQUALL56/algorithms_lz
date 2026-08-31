@@ -2,8 +2,8 @@ import random
 
 
 def main():
-    arr1 = data_generate()
-    arr2 = arr1
+    arr1 = data_generate(10)
+    arr2 = arr1.copy()
     bubble_sort(arr1)
     selection_sort(arr2)
 
@@ -22,8 +22,8 @@ def bubble_sort(arr):
                 arr[j - 1], arr[j] = arr[j], arr[j - 1]
                 iter += 1
                 print(f"{arr}\n")
-    print(f"""Sorted list: {arr}.
-And count of iterations : {iter}""")
+    print(f"""Sorted list by BUBBLE: {arr}.
+And count of iterations : {iter} \n""")
     return arr
 
 
@@ -41,8 +41,8 @@ def selection_sort(arr):
             arr[i], arr[min_ind] = arr[min_ind], arr[i]
             iter += 1
             print(f"{arr}\n")
-    print(f"""Sorted list: {arr}.
-And count of iterations : {iter}""")
+    print(f"""Sorted list by SELECTION: {arr}.
+And count of iterations : {iter} \n""")
     return arr
 
 
