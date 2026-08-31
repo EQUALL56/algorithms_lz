@@ -30,15 +30,15 @@ And count of iterations : {iter} \n""")
 def selection_sort(arr):
     iter = 0
     for i in range(0, len(arr)):
-        min_ind = i
+        max_ind = i
         j = i + 1
         while j < len(arr):
-            if arr[j] > arr[min_ind]:
-                min_ind = j
+            if arr[j] > arr[max_ind]:
+                max_ind = j
             j += 1
 
-        if min_ind != i:
-            arr[i], arr[min_ind] = arr[min_ind], arr[i]
+        if max_ind != i:
+            arr[i], arr[max_ind] = arr[max_ind], arr[i]
             iter += 1
             print(f"{arr}\n")
     print(f"""Sorted list by SELECTION: {arr}.
