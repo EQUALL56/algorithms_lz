@@ -21,7 +21,7 @@ def bubble_sort(arr):
             if arr[j - 1] < arr[j]:
                 arr[j - 1], arr[j] = arr[j], arr[j - 1]
                 iter += 1
-                print(arr + "\n")
+                print(f"{arr}\n")
     print(f"""Sorted list: {arr}.
 And count of iterations : {iter}""")
     return arr
@@ -40,7 +40,7 @@ def selection_sort(arr):
         if min_ind != i:
             arr[i], arr[min_ind] = arr[min_ind], arr[i]
             iter += 1
-            print(arr + "\n")
+            print(f"{arr}\n")
     print(f"""Sorted list: {arr}.
 And count of iterations : {iter}""")
     return arr
