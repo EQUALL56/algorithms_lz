@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    arr1 = data_generate(10)
+    arr1 = data_generate(100)
     arr2 = arr1.copy()
     bubble_sort(arr1)
     selection_sort(arr2)
