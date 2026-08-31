@@ -8,7 +8,7 @@ def main():
     selection_sort(arr2)
 
 
-def data_generate(count: int = 100, min_val: int = -(10**9), max_val: int = 10**9):
+def data_generate(count: int = 100, min_val: int = -(10**2), max_val: int = 10**2):
     arr = []
     arr = random.choices(range(min_val, max_val), k=count)
     return arr
